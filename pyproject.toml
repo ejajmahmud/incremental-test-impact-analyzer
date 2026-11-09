@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "incremental-test-impact-analyzer"
+version = "0.1.0"
+description = "Static call-graph test impact analyzer that maps code diffs to the minimally affected test cases for sub-second agent test loops"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+incremental-test-impact-analyzer = "incremental_test_impact_analyzer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["incremental_test_impact_analyzer*"]
